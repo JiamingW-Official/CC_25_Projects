@@ -108,7 +108,7 @@
     width: 100%;
   }
   
-  /* --- CUSTOM CURSOR --- */
+
   .custom-cursor {
     position: fixed;
     pointer-events: none;
@@ -147,5 +147,5 @@
   
   /* --- HOVER DIM MARKER --- */
   .hover-dim {
-    /* For JS event selection */
+  
   }

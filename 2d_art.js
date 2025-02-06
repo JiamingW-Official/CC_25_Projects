@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
     });
   }
 });
-/***** CUSTOM CURSOR CODE *****/
+
 const customCursor = document.getElementById('custom-cursor');
 const words = ["When", "I", "Had", "A", "Flash", "Of", "Inspiration"];
 let currentIndex = 0;
