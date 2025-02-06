@@ -1,20 +1,20 @@
 /***** SCROLL & HOVER EFFECTS *****/
 const spacer = document.querySelector('.scroll-spacer');
 spacer.style.height = window.innerHeight * 2 + "px";
+
 const externalLinks = document.querySelectorAll('.external-link');
 window.addEventListener('scroll', () => {
   const progress = Math.min(window.scrollY / window.innerHeight, 1);
-  if (progress >= 0.5) {
-    externalLinks.forEach(link => {
+  externalLinks.forEach(link => {
+    if (progress >= 0.5) {
       link.style.display = 'none';
-    });
-  } else {
-    externalLinks.forEach(link => {
+    } else {
       link.style.display = 'block';
       link.style.opacity = 1 - (progress * 2);
-    });
-  }
+    }
+  });
 });
+
 /***** CUSTOM CURSOR CODE *****/
 const customCursor = document.getElementById('custom-cursor');
 const words = ["When", "I", "Had", "A", "Flash", "Of", "Inspiration"];
