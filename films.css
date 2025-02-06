@@ -1,0 +1,219 @@
+/* --- Basic Reset & Font Setup --- */
+@font-face {
+    font-family: 'Lagency-Regular';
+    src: url('Lagency-Regular.ttf') format('truetype');
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Aktiv Grotesk Ex', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+    cursor: none;
+  }
+  a {
+    cursor: none !important;
+    position: relative;
+  }
+  a::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+  }
+  
+  /* --- Black Background --- */
+  .black-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 0;
+  }
+  
+  /* --- Overlay Title --- */
+  .overlay-text {
+    position: fixed;
+    top: 80%;
+    left: 2%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #F42424;
+  }
+  .overlay-text h1 {
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  
+  /* --- Content Grid (2 columns) --- */
+  .content-grid {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    width: 96%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    z-index: 10;
+  }
+  
+  /* --- Left Column --- */
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .project-main {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .project-main img {
+    width: 100%;
+    display: block;
+  }
+  .project-main:hover {
+    transform: scale(1.05);
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+  .thumb {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .thumb img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .thumb:hover {
+    transform: scale(1.1);
+  }
+  
+  /* --- Right Column (Caption) --- */
+  .right-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .caption-container {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+  }
+  .caption-container.hover-active {
+    opacity: 1;
+  }
+  .caption-title {
+    font-family: 'Aktiv Grotesk Ex', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.5s ease;
+  }
+  .caption-title:hover {
+    color: #A1E1F1;
+  }
+  .caption-subtitle {
+    font-family: 'Lagency-Regular', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  /* --- Fixed Navigation Bar --- */
+  .fixed-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    z-index: 10;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+  }
+  .fixed-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  .fixed-nav li {
+    font-size: 1rem;
+    font-weight: bold;
+    transition: font-size 0.3s ease, color 0.3s ease;
+  }
+  .fixed-nav a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  .fixed-nav a:hover {
+    color: #A1E1F1;
+  }
+  .fixed-nav:hover {
+    padding: 40px 0;
+  }
+  .fixed-nav:hover li {
+    font-size: 1.5rem;
+  }
+  
+  /* --- Scroll Spacer --- */
+  .scroll-spacer {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* --- Custom Cursor --- */
+  .custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 0.3rem 1rem;
+    font-family: 'Lagency-Regular', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    opacity: 1;
+    white-space: nowrap;
+  }
+  .custom-cursor.circle-cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+  }
+  .custom-cursor.blue-cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #A1E1F1;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+  }
+  
+  /* --- Hover Dim Marker --- */
+  .hover-dim { }

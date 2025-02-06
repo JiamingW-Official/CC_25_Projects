@@ -1,0 +1,170 @@
+/* --- Font Setup --- */
+@font-face {
+    font-family: 'Lagency-Regular';
+    src: url('Lagency-Regular.ttf') format('truetype');
+    /* Update the URL/path as needed */
+  }
+  
+  /* --- General Reset & Base Styles --- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Aktiv Grotesk Ex', sans-serif;
+    background-color: #000;  /* Solid black background */
+    color: #fff;
+    overflow-x: hidden;
+    cursor: none; /* Hide system cursor */
+  }
+  
+  /* Ensure clickable elements do not show the default pointer */
+  a {
+    cursor: none !important;
+    position: relative;
+  }
+  
+  /* Expand clickable area via pseudo-element */
+  a::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+  }
+  
+  /* --- BLACK BACKGROUND --- */
+  .black-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 0;
+  }
+  
+  /* --- EXTERNAL LINKS --- */
+  .external-link {
+    position: fixed;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    z-index: 4;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+  
+  .website-link {
+    top: 5%;
+    right: 2%;
+    text-align: right;
+  }
+  
+  .instagram-link {
+    top: 5%;
+    left: 2%;
+    text-align: left;
+  }
+  
+  .external-link:hover {
+    color: #A1E1F1;
+  }
+  
+  /* --- FIXED NAVIGATION BAR --- */
+  .fixed-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    z-index: 1000;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .fixed-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .fixed-nav li {
+    font-size: 1rem;
+    font-weight: 800;
+    transition: font-size 0.3s ease, color 0.3s ease;
+  }
+  
+  .fixed-nav a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  .fixed-nav a:hover {
+    color: #A1E1F1;
+  }
+  
+  .fixed-nav:hover {
+    padding: 40px 0;
+  }
+  
+  .fixed-nav:hover li {
+    font-size: 1.5rem;
+  }
+  
+  /* --- SCROLL SPACER --- */
+  .scroll-spacer {
+    width: 100%;
+  }
+  
+  /* --- CUSTOM CURSOR --- */
+  .custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 0.3rem 1rem;
+    font-family: 'Lagency-Regular', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    opacity: 1;
+    white-space: nowrap;
+  }
+  
+  /* White circle style */
+  .custom-cursor.circle-cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+  }
+  
+  /* Blue dot style: using original blue color (#A1E1F1) */
+  .custom-cursor.blue-cursor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #A1E1F1;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+  }
+  
+  /* --- HOVER DIM MARKER --- */
+  .hover-dim {
+    /* Used solely for JS event selection */
+  }
